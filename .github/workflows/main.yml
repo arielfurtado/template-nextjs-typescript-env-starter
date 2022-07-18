@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v2
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
@@ -20,13 +20,6 @@ jobs:
 
       - name: Build my App
         run: npm run build && npm run export && touch ./out/.nojekyll
-
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v2
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
