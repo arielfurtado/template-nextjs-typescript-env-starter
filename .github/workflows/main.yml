@@ -18,7 +18,7 @@ jobs:
       - name: Installing my packages
         run: npm install --force
 
-      - name:  🔨 Build Project
+      - name: 🔨 Build Project
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /teste
@@ -33,5 +33,4 @@ jobs:
           server: ${{ secrets.ftp_host }}
           username: ${{ secrets.ftp_user }}
           password: ${{ secrets.ftp_password }}
-          local-dir: ./out/
           server-dir: public_html/teste/
