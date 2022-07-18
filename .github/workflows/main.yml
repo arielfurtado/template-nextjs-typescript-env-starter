@@ -18,8 +18,14 @@ jobs:
       - name: Installing my packages
         run: npm install --force
 
-      - name: Build my App
-        run: npm run build && npm run export && touch ./out/.nojekyll
+      - name: Build my App  
+          run: npm run build
+          env:
+            NEXT_PUBLIC_BASE_PATH: /teste
+        - run: npm run export
+          env:
+            NEXT_PUBLIC_BASE_PATH: /teste
+        - run: touch ./out/.nojekyll
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
