@@ -11,28 +11,7 @@ const Template: NextPage = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/">
-                <a>Olá</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog">
-                <a>Blog</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact">
-                <a>Contact</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
   );
 };
