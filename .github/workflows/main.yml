@@ -21,10 +21,10 @@ jobs:
       - name: 🔨 Build Project
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /teste/
+          NEXT_PUBLIC_BASE_PATH: ./teste/
       - run: npm run export
         env:
-          NEXT_PUBLIC_BASE_PATH: /teste/
+          NEXT_PUBLIC_BASE_PATH: ./teste/
       - run: touch ./out/.nojekyll
 
       - name: 📂 Sync files
